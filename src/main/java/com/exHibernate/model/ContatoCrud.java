@@ -54,13 +54,15 @@ public class ContatoCrud {
 		Transaction transacao = sessao.beginTransaction();
 		ContatoCrud crud = new ContatoCrud(sessao);
 		
-//		Contato contato1 = new Contato();
-//		contato1.setNome("Sicrano");
-//		contato1.setTelefone("123");
-//		contato1.setEmail("teste@teste.com");
-//		contato1.setDataCadastro(new Date(System.currentTimeMillis()));
-//		contato1.setObs("teste");
-//		crud.salvar(contato1);
+		Contato contato2 = new Contato();
+		contato2.setNome("Sicrano");
+		contato2.setTelefone("123");
+		contato2.setEmail("teste@teste.com");
+		contato2.setDataCadastro(new Date(System.currentTimeMillis()));
+		contato2.setObs("teste");
+		crud.salvar(contato2);
+		
+		transacao.commit();
 		
 		System.out.println("Total de registros cadastrados: "+crud.listar().size());
 	}
