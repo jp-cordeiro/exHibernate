@@ -50,7 +50,7 @@ public class ContatoCrud {
 	
 	public static void main(String[] args) {
 		Session sessao = HibenateUtil.getSessionFactory().openSession();
-		//Inicia uma transação, ou seja, alteração no banco de dados somente serão efetivadas no banco se nenhum ereo acontecer
+		//Inicia uma transação, ou seja, alteração no banco de dados somente serão efetivadas no banco se nenhum erro acontecer
 		Transaction transacao = sessao.beginTransaction();
 		ContatoCrud crud = new ContatoCrud(sessao);
 		
